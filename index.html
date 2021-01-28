@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
+    <!-- Optional Theme Stylesheet
+        <link rel="stylesheet" href="https://unpkg.com/browse/@glidejs/glide/dist/css/glide.theme.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.26/dist/shoelace/shoelace.css">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.26/dist/shoelace/shoelace.esm.js"></script>
+    <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Dementia Awareness</title>
+    <base href="/">
+</head>
+
+<body>
+    <div id="splashscreenContainer">
+        <div id="sadManImageContainer">
+            <img id="sadManImage" src="./images/sad_man2.png" alt="Picture of a sad man">
+        </div>
+        <div id="flowerImageContainer">
+            <img id="flower" src="./images/FMN_flower.svg" alt="Forget me not flower">
+        </div>
+        <h1 id="splashscreenContent">FORGET ME NOT</h1>
+    </div>
+    <div id="siteBody">
+        <div id="header">
+            <div id="iconContainer">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower" style="width:6vw;">
+            </div>
+            <div id="headingContainer">
+                <h1 id="heading">dementia AWARENESS</h1>
+            </div>
+        </div>
+        <div class="glide glideStyle">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides custom_glide_Container">
+                    <li class="glide__slide"><img class="gliderImage"
+                            src="./images/todd-quackenbush-B60t4HvxznY-unsplash.jpg" alt="Forget me not flower"></li>
+                    <li class="glide__slide"><img class="gliderImage"
+                            src="./images/todd-quackenbush-B60t4HvxznY-unsplash.jpg" alt="Forget me not flower"></li>
+                    <li class="glide__slide"><img class="gliderImage"
+                            src="./images/todd-quackenbush-B60t4HvxznY-unsplash.jpg" alt="Forget me not flower"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="parallax"></div>
+        <div class="contentSection">
+            <sl-button onclick="topFunction()" class="rttFlower">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower"
+                    style="width:10vw;height:10vw;">
+            </sl-button>
+            <div class="contentSectionHeading">WHAT IS DEMENTIA</div>
+            <div id="brainContentSectionImageContainer">
+                <img id="brainImage" src="images/Brain.svg" alt="Brain" />
+            </div>
+            <div class="contentSectionBG">
+                <svg class="backgroundImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 870">
+                    <path d="M1920,792.14s-383.26-159.06-995.55,0C250.34,967.33,0,792.14,0,792.14V0H1920Z"
+                        transform="translate(0 0)" fill="#1D80AB" />
+                </svg>
+            </div>
+        </div>
+        <div class="parallax"></div>
+        <div class="contentSection" style="display:flex;height:140vh;">
+            <sl-button onclick="topFunction()" class="rttFlower">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower"
+                    style="width:10vw;height:10vw;">
+            </sl-button>
+            <div class="contentSectionHeading">SIGNS AND SYMPTOMS</div>
+            <div class="card aggressionCard" style="background-color:yellow;">
+                <sl-card class="card-overview" style="background-color:blue;height:100%;">
+                    <div class="cardImageContainer" style="background-color:orange;">
+                        <img src="./images/FMN_flower.svg"
+                            alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+                    </div>
+                    <div class="contentImageContainer" style="background-color:red;">
+                        <strong>Aggression</strong><br />
+                        <br /><small>Click this card to find out more about how
+                            aggression is presented with dementia
+                        </small>
+                    </div>
+                </sl-card>
+            </div>
+            <div class="card">
+                <sl-card class="card-overview">
+                    <img slot="image"
+                        src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+                        alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+
+                    <strong>Apathy</strong><br />
+                    <br /><small>Click this card to find out more about how
+                        apathy is presented with dementia
+                    </small>
+                </sl-card>
+            </div>
+            <div class="contentSectionBG">
+                <svg class="backgroundImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 870">
+                    <path d="M1920,792.14s-383.26-159.06-995.55,0C250.34,967.33,0,792.14,0,792.14V0H1920Z"
+                        transform="translate(0 0)" fill="#1D80AB" />
+                </svg>
+            </div>
+        </div>
+        <div class="parallax"></div>
+        <div class="contentSection">
+            <sl-button onclick="topFunction()" class="rttFlower">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower"
+                    style="width:10vw;height:10vw;">
+            </sl-button>
+            <div class="contentSectionHeading">DEMENTIA AMONG US</div>
+            <div class="contentSectionBG">
+                <svg class="backgroundImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 870">
+                    <path d="M1920,792.14s-383.26-159.06-995.55,0C250.34,967.33,0,792.14,0,792.14V0H1920Z"
+                        transform="translate(0 0)" fill="#1D80AB" />
+                </svg>
+            </div>
+        </div>
+        <div class="parallax"></div>
+        <div class="contentSection">
+            <sl-button onclick="topFunction()" class="rttFlower">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower"
+                    style="width:10vw;height:10vw;">
+            </sl-button>
+            <div class="contentSectionHeading">LIVING WITH DEMENTIA</div>
+            <div class="videoContainer">
+                <!-- <sl-responsive-embed aspect-ratio="4:3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sXYIxJScSik" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </sl-responsive-embed> -->
+            </div>
+            <div class="contentSectionBG">
+                <svg class="backgroundImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 870">
+                    <path d="M1920,792.14s-383.26-159.06-995.55,0C250.34,967.33,0,792.14,0,792.14V0H1920Z"
+                        transform="translate(0 0)" fill="#1D80AB" />
+                </svg>
+            </div>
+        </div>
+        <div class="parallax"></div>
+        <div class="contentSection">
+            <sl-button onclick="topFunction()" class="rttFlower">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower"
+                    style="width:10vw;height:10vw;">
+            </sl-button>
+            <div class="contentSectionHeading">REDUCING RISKS</div>
+            <div class="contentSectionBG">
+                <svg class="backgroundImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 870">
+                    <path d="M1920,792.14s-383.26-159.06-995.55,0C250.34,967.33,0,792.14,0,792.14V0H1920Z"
+                        transform="translate(0 0)" fill="#1D80AB" />
+                </svg>
+            </div>
+        </div>
+        <div class="parallax"></div>
+        <div class="contentSection">
+            <sl-button onclick="topFunction()" class="rttFlower">
+                <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower"
+                    style="width:10vw;height:10vw;">
+            </sl-button>
+            <div class="contentSectionHeading">GALLERY</div>
+            <div class="contentSectionBG">
+                <svg class="backgroundImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 870">
+                    <path d="M1920,792.14s-383.26-159.06-995.55,0C250.34,967.33,0,792.14,0,792.14V0H1920Z"
+                        transform="translate(0 0)" fill="#1D80AB" />
+                </svg>
+            </div>
+        </div>
+        <div class="parallax"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
