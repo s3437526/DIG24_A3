@@ -56,7 +56,6 @@ body::-webkit-scrollbar {
     }
 }
 
-//
 #splashscreenContainer {
     position: fixed;
     width: 100%;
@@ -111,7 +110,6 @@ body::-webkit-scrollbar {
     animation-fill-mode: forwards;
 }
 
-//
 #header {
     max-height: 20vh;
     width: 100vw;
@@ -124,6 +122,11 @@ body::-webkit-scrollbar {
 
 .glideStyle {
     width: 100vw;
+}
+
+.dementiaFact{
+    position:absolute;
+    margin: 5vw 0 0 2vw;
 }
 
 .custom_glide_Container {

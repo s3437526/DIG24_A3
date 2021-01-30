@@ -18,7 +18,7 @@ aggressionCard.addEventListener('click', () => {
 
 new Glide('.glide', {
   type: 'carousel',
-  autoplay: 4000 | true,
+  autoplay: 8000 | true,
   hoverPause: true,
   animationDuration: 2000
 }).mount();
