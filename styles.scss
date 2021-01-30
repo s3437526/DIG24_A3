@@ -326,6 +326,38 @@ sl-card::part(body) {
     width: 100%;
 }
 
+.livingSVG {
+    // vertical-align: bottom;
+    // max-width: 10vw;
+// margin: auto;
+width:100%;
+height:100%;
+// padding: auto;
+// bottom:auto;
+// top:auto;
+}
+
+.footerIconsContainer {
+    width: 100%;
+    // background-color: orange;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.footerIconDiv {
+    // background-color: aqua;
+    margin: auto 5vw auto 5vw; 
+    max-width: 15vw;
+    max-height: 15vw;
+    display:flex;
+    align-items: center;
+    // position:relative;
+    // padding:auto;
+}
+
 @media only screen and (min-width: 480px) {
     /* For mobiles: */
     .col-xs-1 {
