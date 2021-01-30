@@ -151,6 +151,11 @@ body::-webkit-scrollbar {
   width: 100vw;
 }
 
+.dementiaFact {
+  position: absolute;
+  margin: 5vw 0 0 2vw;
+}
+
 .custom_glide_Container {
   max-height: 70vh;
   /* .......*/
