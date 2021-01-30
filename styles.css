@@ -396,15 +396,9 @@ sl-card::part(body) {
 }
 
 .footerIconDiv {
-  margin: auto 5vw auto 5vw;
+  margin: auto;
   max-width: 15vw;
   max-height: 15vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media only screen and (min-width: 480px) {
