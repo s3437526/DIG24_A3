@@ -124,9 +124,10 @@ body::-webkit-scrollbar {
     width: 100vw;
 }
 
-.dementiaFact{
-    position:absolute;
+.dementiaFact {
+    position: absolute;
     margin: 5vw 0 0 2vw;
+    // color:black;
 }
 
 .custom_glide_Container {
@@ -143,6 +144,15 @@ body::-webkit-scrollbar {
     justify-content: center;
     // background-color: rgba(81, 124, 255, 1);
     background-color: rgba(29, 128, 171, 1);
+}
+
+.contentContainer {
+    color: black;
+    position: relative;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: seashell;
 }
 
 .contentSectionBG {
@@ -239,7 +249,7 @@ sl-card body {
 .card {
     position: relative;
     margin: 10% 2% 2% 2%;
-    max-width: 30vw;
+    max-width: 10vw;
     max-height: 50vw;
     color: black;
     box-shadow: 15px 15px 10px 0px rgba(50, 50, 50, 0.75);
@@ -332,12 +342,12 @@ sl-card::part(body) {
 .livingSVG {
     // vertical-align: bottom;
     // max-width: 10vw;
-// margin: auto;
-width:100%;
-height:100%;
-// padding: auto;
-// bottom:auto;
-// top:auto;
+    // margin: auto;
+    width: 100%;
+    height: 100%;
+    // padding: auto;
+    // bottom:auto;
+    // top:auto;
 }
 
 .footerIconsContainer {
@@ -352,7 +362,7 @@ height:100%;
 
 .footerIconDiv {
     // background-color: aqua;
-    margin: auto; 
+    margin: auto;
     max-width: 15vw;
     max-height: 15vw;
     // display:flex;
