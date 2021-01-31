@@ -282,7 +282,7 @@ sl-card body {
 .card {
   position: relative;
   margin: 10% 2% 2% 2%;
-  max-width: 10vw;
+  max-width: 20vw;
   max-height: 50vw;
   color: black;
   -webkit-box-shadow: 15px 15px 10px 0px rgba(50, 50, 50, 0.75);
@@ -352,8 +352,17 @@ sl-card::part(body) {
 }
 
 .cardImageContainer {
-  max-height: 50%;
-  max-width: 50%;
+  height: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cardImage {
@@ -363,6 +372,33 @@ sl-card::part(body) {
 
 .contentImageContainer {
   max-height: 50%;
+  width: 100%;
+}
+
+.card-overview::part(base) {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-overview::part(body) {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dementiaTypeCard {
+  background-color: yellow;
+  width: 90%;
+  margin: auto;
 }
 
 .hidden {
