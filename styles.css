@@ -196,7 +196,8 @@ body::-webkit-scrollbar {
 .backgroundImage {
   position: relative;
   width: 100vw;
-  top: -20vw;
+  top: -1px;
+  height: auto;
 }
 
 .contentSectionHeading {
@@ -228,6 +229,8 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 10vw;
+  max-height: 10vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -282,11 +285,9 @@ sl-card body {
 .card {
   position: relative;
   margin: 10% 2% 2% 2%;
-  max-width: 10vw;
+  max-width: 20vw;
   max-height: 50vw;
   color: black;
-  -webkit-box-shadow: 15px 15px 10px 0px rgba(50, 50, 50, 0.75);
-          box-shadow: 15px 15px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
 .card-overview {
@@ -349,11 +350,21 @@ sl-card::part(body) {
   width: 20vw;
   height: auto;
   z-index: 2;
+  color: black;
 }
 
 .cardImageContainer {
-  max-height: 50%;
-  max-width: 50%;
+  height: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cardImage {
@@ -363,6 +374,35 @@ sl-card::part(body) {
 
 .contentImageContainer {
   max-height: 50%;
+  width: 100%;
+}
+
+.card-overview::part(base) {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-overview::part(body) {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dementiaTypeCard {
+  margin: auto;
+}
+
+.centeredText {
+  text-align: center;
 }
 
 .hidden {

@@ -168,8 +168,8 @@ body::-webkit-scrollbar {
 .backgroundImage {
     position: relative;
     width: 100vw;
-    top: -20vw;
-    // height: auto;
+    top: -1px;
+    height: auto;
     // z-index: 2;
 }
 
@@ -199,6 +199,8 @@ body::-webkit-scrollbar {
 
 .rttFlower {
     display: flex;
+    max-width: 10vw;
+    max-height: 10vw;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -249,10 +251,10 @@ sl-card body {
 .card {
     position: relative;
     margin: 10% 2% 2% 2%;
-    max-width: 10vw;
+    max-width: 20vw;
     max-height: 50vw;
     color: black;
-    box-shadow: 15px 15px 10px 0px rgba(50, 50, 50, 0.75);
+    // box-shadow: 15px 15px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
 .card-overview {
@@ -296,11 +298,15 @@ sl-card::part(body) {
     width: 20vw;
     height: auto;
     z-index: 2;
+    color: black;
 }
 
 .cardImageContainer {
-    max-height: 50%;
-    max-width: 50%;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardImage {
@@ -310,6 +316,34 @@ sl-card::part(body) {
 
 .contentImageContainer {
     max-height: 50%;
+    width: 100%;
+}
+
+.card-overview::part(base) {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    // background-color: chartreuse;
+    // width: 400px;
+}
+
+.card-overview::part(body) {
+    // width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    // background-color: chartreuse;
+    // width: 400px;
+}
+
+.dementiaTypeCard {
+    // background-color: yellow;
+    // width: 90%; // test
+    margin: auto;
+}
+
+.centeredText {
+    text-align: center;
 }
 
 .hidden {

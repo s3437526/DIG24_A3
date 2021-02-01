@@ -11,9 +11,9 @@ function topFunction() {
 // })
 
 // Aggression cart events
-const aggressionCard = document.querySelector('.aggressionCard');
-aggressionCard.addEventListener('click', () => {
-  console.log("aggression card clicked");
+const dementiaTypeCard = document.querySelector('.dementiaTypeCard');
+dementiaTypeCard.addEventListener('click', () => {
+  console.log("dementiaTypeCard card clicked");
 });
 
 new Glide('.glide', {
