@@ -397,10 +397,6 @@ sl-card::part(body) {
           justify-content: center;
 }
 
-.dementiaTypeCard {
-  margin: auto;
-}
-
 .centeredText {
   text-align: center;
 }
