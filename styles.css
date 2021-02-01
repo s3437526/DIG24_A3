@@ -196,7 +196,8 @@ body::-webkit-scrollbar {
 .backgroundImage {
   position: relative;
   width: 100vw;
-  top: -20vw;
+  top: -1px;
+  height: auto;
 }
 
 .contentSectionHeading {
