@@ -37,3 +37,14 @@ test.addEventListener("click", () => {
 document.querySelector('.dementiaFact').addEventListener('click', () => {
     console.log("clicked")
 });
+
+// GSAP animate WHAT IS DEMENTIA section
+const whatIsDementiaTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#trigger1",
+        start: "top top",
+        scrub: 1
+    }
+})
+whatIsDementiaTl.to('#fact1', { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact2', 5, { autoAlpha: 1, opacity: 1, display: "flex" });
