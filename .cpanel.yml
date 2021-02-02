@@ -1,8 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/dukmivqb/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp main.js $DEPLOYPATH
-    - /bin/cp styles.css $DEPLOYPATH
-    - /bin/cp -R images $DEPLOYPATH
