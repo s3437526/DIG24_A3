@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/dukmivqb/public_html/
+    - /bin/cp /home/dukmivqb/dementia/index.html $DEPLOYPATH
+    - /bin/cp /home/dukmivqb/dementia/main.js $DEPLOYPATH
+    - /bin/cp /home/dukmivqb/dementia/styles.css $DEPLOYPATH
+    - /bin/cp -R /home/dukmivqb/dementia/images $DEPLOYPATH
