@@ -40,6 +40,7 @@ body::-webkit-scrollbar {
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 @keyframes fadeOut {
@@ -48,6 +49,7 @@ body::-webkit-scrollbar {
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 
@@ -91,7 +93,6 @@ body::-webkit-scrollbar {
           animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 200;
 }
 
 #sadManImageContainer {
