@@ -152,7 +152,7 @@ body::-webkit-scrollbar {
   width: 100vw;
 }
 
-.dementiaFact {
+.carouselDementiaFact {
   position: absolute;
   margin: 5vw 0 0 2vw;
 }
@@ -181,7 +181,6 @@ body::-webkit-scrollbar {
   margin: auto;
   width: 80%;
   height: 80%;
-  background-color: green;
 }
 
 .contentSectionBG {
@@ -211,23 +210,9 @@ body::-webkit-scrollbar {
 }
 
 .rttFlower::part(base) {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  line-height: normal;
   max-width: 10vw;
-  max-height: 10vw;
   border: none;
-  text-align: center;
   background-color: #1d80ab;
-  z-index: 1;
   cursor: pointer;
 }
 
