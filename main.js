@@ -44,7 +44,7 @@ const whatIsDementiaTl = gsap.timeline({
     trigger: "#trigger1",
     start: "top top",
     scrub: 1,
-    end: "+=12000",
+    end: "+=20000",
     // end: "+=" + (window.innerHeight * 2),
     pin: true // this breaks svg transparency
   } // looks like it is the opacity of the parallax that is effecting this
@@ -59,7 +59,7 @@ whatIsDementiaTl.to('#fact7', 300, { autoAlpha: 1, opacity: 1, display: "flex" }
 
 whatIsDementiaTl.to(".dementiaFact", 50, { opacity: 0, autoAlpha: 0 });
 whatIsDementiaTl.to("#factsSlide1", 50, { opacity: 0, display: "none" });
- 
+
 whatIsDementiaTl.to('#factsSlide2', 10, { autoAlpha: 1, opacity: 1, display: "block" });
 
 whatIsDementiaTl.to('#fact8', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
@@ -78,7 +78,7 @@ whatIsDementiaTl.to('#commonType2', 500, { autoAlpha: 1, opacity: 1, display: "f
 whatIsDementiaTl.to('#commonType3', 500, { autoAlpha: 1, opacity: 1, display: "flex" });
 whatIsDementiaTl.to('#commonType4', 500, { autoAlpha: 1, opacity: 1, display: "flex" });
 
-// gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 
 // gsap.from("#commonType4", {
 //   duration: 5, 
@@ -94,13 +94,21 @@ whatIsDementiaTl.to('#commonType4', 500, { autoAlpha: 1, opacity: 1, display: "f
 //   }
 // });
 
-// const whatIsDementiaTl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#commonType4",
-//     start: "top top",
-//     scrub: 1,
-//     end: "+=2000",
-//     // end: "+=" + (window.innerHeight * 2),
-//     pin: true // this breaks svg transparency
-//   } // looks like it is the opacity of the parallax that is effecting this
-// }) 
+const whatIsDementiaT2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#trigger1",
+    start: 1000,
+    scrub: 1,
+    end: "+=2000",
+    yoyo: true,
+    ease: "power1.inOut",
+    motionPath: {
+      path: "#path",
+      align: "#placeholder1",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+      // end: "+=" + (window.innerHeight * 2),
+      pin: true // this breaks svg transparency
+    }
+  } // looks like it is the opacity of the parallax that is effecting this
+}) 
