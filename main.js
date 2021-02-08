@@ -23,21 +23,6 @@ new Glide('.glide', {
   animationDuration: 2000
 }).mount();
 
-const imageCard = document.querySelector('.card-basic')
-imageCard.addEventListener('mouseover', () => {
-  console.log("anything");
-});
-
-
-let test = document.querySelector('.card-basic')
-test.addEventListener("click", () => {
-  console.log("You knocked?");
-});
-
-document.querySelector('.dementiaFact').addEventListener('click', () => {
-  console.log("clicked")
-});
-
 // GSAP animate WHAT IS DEMENTIA section
 const whatIsDementiaTl = gsap.timeline({
   scrollTrigger: {
@@ -144,3 +129,9 @@ closeButton1.addEventListener('click', () => dementiaDialog1.hide());
 
 // openButton4.addEventListener('click', () => dementiaDialog4.show());
 // closeButton4.addEventListener('click', () => dementiaDialog4.hide());
+
+// Gallery image 1 dialog
+const galleryImage1 = document.querySelector('#galleryImage1');
+const galleryOpenButton1 = galleryImage1.nextElementSibling;
+
+galleryOpenButton1.addEventListener('click', () => galleryImage1.show());
