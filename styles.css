@@ -166,7 +166,7 @@ body::-webkit-scrollbar {
 .contentSection {
   position: relative;
   width: 100vw;
-  height: 90vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,6 +305,7 @@ sl-card body {
 }
 
 .card-overview {
+  position: relative;
   height: 100%;
   width: 100%;
 }
@@ -360,7 +361,6 @@ sl-card::part(body) {
 .cardContainer {
   padding: 2%;
   position: relative;
-  margin-top: 5vw;
   width: 20vw;
   height: auto;
   z-index: 2;

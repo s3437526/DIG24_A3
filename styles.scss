@@ -140,7 +140,7 @@ body::-webkit-scrollbar {
 .contentSection {
     position: relative;
     width: 100vw;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     // background-color: rgba(81, 124, 255, 1);
@@ -328,6 +328,7 @@ sl-card body {
 }
 
 .card-overview {
+    position:relative;
     height: 100%;
     width: 100%;
 }
@@ -364,7 +365,7 @@ sl-card::part(body) {
 .cardContainer {
     padding: 2%;
     position: relative;
-    margin-top: 5vw;
+    // margin-top: 5vw;
     width: 20vw;
     height: auto;
     z-index: 2;
@@ -406,11 +407,11 @@ sl-card::part(body) {
     // width: 400px;
 }
 
-.dementiaTypeCard {
+// .dementiaTypeCard {
     // background-color: yellow;
     // width: 90%; // test
     // margin: auto;
-}
+// }
 
 .prevelanceContainer {
     width: 100%;
