@@ -112,3 +112,35 @@ const whatIsDementiaT2 = gsap.timeline({
     }
   } // looks like it is the opacity of the parallax that is effecting this
 }) 
+
+// Common dementia type 1 dialog
+const dementiaDialog1 = document.querySelector('#dementiaDialog1');
+const openButton1 = dementiaDialog1.nextElementSibling;
+const closeButton1 = dementiaDialog1.querySelector('sl-button[slot="footer"]');
+
+openButton1.addEventListener('click', () => dementiaDialog1.show());
+closeButton1.addEventListener('click', () => dementiaDialog1.hide());
+
+// // Common dementia type 2 dialog
+// const dementiaDialog2 = document.querySelector('#dementiaDialog2');
+// const openButton2 = dementiaDialog2.nextElementSibling;
+// const closeButton2 = dementiaDialog2.querySelector('sl-button[slot="footer"]');
+
+// openButton2.addEventListener('click', () => dementiaDialog2.show());
+// closeButton2.addEventListener('click', () => dementiaDialog2.hide());
+
+// // Common dementia type 3 dialog
+// const dementiaDialog3 = document.querySelector('#dementiaDialog3');
+// const openButton3 = dementiaDialog3.nextElementSibling;
+// const closeButton3 = dementiaDialog3.querySelector('sl-button[slot="footer"]');
+
+// openButton3.addEventListener('click', () => dementiaDialog3.show());
+// closeButton3.addEventListener('click', () => dementiaDialog3.hide());
+
+// // Common dementia type 4 dialog
+// const dementiaDialog4 = document.querySelector('#dementiaDialog4');
+// const openButton4 = dementiaDialog4.nextElementSibling;
+// const closeButton4 = dementiaDialog4.querySelector('sl-button[slot="footer"]');
+
+// openButton4.addEventListener('click', () => dementiaDialog4.show());
+// closeButton4.addEventListener('click', () => dementiaDialog4.hide());
