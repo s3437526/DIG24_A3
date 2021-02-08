@@ -44,24 +44,63 @@ const whatIsDementiaTl = gsap.timeline({
     trigger: "#trigger1",
     start: "top top",
     scrub: 1,
-    end: "+=8000",
+    end: "+=12000",
     // end: "+=" + (window.innerHeight * 2),
     pin: true // this breaks svg transparency
   } // looks like it is the opacity of the parallax that is effecting this
 }) // can be seen on chrome dev tools on iphone4 setting
-whatIsDementiaTl.to('#fact1', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact2', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact3', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact4', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact5', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact6', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact7', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact1', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact2', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact3', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact4', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact5', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact6', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact7', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 
-whatIsDementiaTl.to(".dementiaFact", 5, { opacity: 0, display: "none" });
+whatIsDementiaTl.to(".dementiaFact", 50, { opacity: 0, autoAlpha: 0 });
+whatIsDementiaTl.to("#factsSlide1", 50, { opacity: 0, display: "none" });
+ 
+whatIsDementiaTl.to('#factsSlide2', 10, { autoAlpha: 1, opacity: 1, display: "block" });
 
-whatIsDementiaTl.to('#fact8', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact9', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact10', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact11', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact12', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
-whatIsDementiaTl.to('#fact13', 10, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact8', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact9', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact10', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact11', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact12', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#fact13', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+
+whatIsDementiaTl.to(".dementiaFact", 100, { opacity: 0, autoAlpha: 0 });
+whatIsDementiaTl.to("#factsSlide2", 100, { opacity: 0, display: "none" });
+
+whatIsDementiaTl.to("#brainContentSectionImageContainer", 100, { display: "block", opacity: 1, autoAlpha: 1 });
+whatIsDementiaTl.to('#commonType1', 500, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#commonType2', 500, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#commonType3', 500, { autoAlpha: 1, opacity: 1, display: "flex" });
+whatIsDementiaTl.to('#commonType4', 500, { autoAlpha: 1, opacity: 1, display: "flex" });
+
+// gsap.registerPlugin(MotionPathPlugin);
+
+// gsap.from("#commonType4", {
+//   duration: 5, 
+//   repeat: 12,
+//   repeatDelay: 3,
+//   yoyo: true,
+//   ease: "power1.inOut",
+//   motionPath:{
+//     path: "#path",
+//     align: "self",
+//     autoRotate: true,
+//     alignOrigin: [0.5, 0.5]
+//   }
+// });
+
+// const whatIsDementiaTl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#commonType4",
+//     start: "top top",
+//     scrub: 1,
+//     end: "+=2000",
+//     // end: "+=" + (window.innerHeight * 2),
+//     pin: true // this breaks svg transparency
+//   } // looks like it is the opacity of the parallax that is effecting this
+// }) 

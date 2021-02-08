@@ -166,7 +166,7 @@ body::-webkit-scrollbar {
 .contentSection {
   position: relative;
   width: 100vw;
-  min-height: 90vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,35 +217,68 @@ body::-webkit-scrollbar {
 }
 
 .dementiaFact {
-  display: none;
+  visibility: hidden;
   opacity: 0;
   position: relative;
   width: 100%;
 }
 
+#factsSlide1 #factsSlide2 {
+  display: none;
+}
+
 #brainContentSectionImageContainer {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   overflow: none;
   margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #brainImage {
   height: 100%;
   width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.actionFacts {
+  display: "none";
+  position: absolute;
+}
+
+#commonType1 {
+  top: 35%;
+  left: 30%;
+}
+
+#commonType2 {
+  top: 55%;
+  left: 30%;
+}
+
+#commonType3 {
+  top: 35%;
+  right: 35%;
+}
+
+#commonType4 {
+  top: 55%;
+  right: 35%;
 }
 
 .parallax {
   /* The image used */
   background-image: url("./images/sad_man.jpg");
   /* Set a specific height */
-  min-height: 80vh;
+  height: 100vh;
   width: 100vw;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
