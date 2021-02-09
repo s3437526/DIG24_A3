@@ -1,7 +1,7 @@
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    console.log("triggered scroll");
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  console.log("triggered scroll");
 }
 
 // document.querySelector('.rttFlower').addEventListener('click', () => {
@@ -13,27 +13,27 @@ function topFunction() {
 // Aggression cart events
 const dementiaTypeCard = document.querySelector('.dementiaTypeCard');
 dementiaTypeCard.addEventListener('click', () => {
-    console.log("dementiaTypeCard card clicked");
+  console.log("dementiaTypeCard card clicked");
 });
 
 new Glide('.glide', {
-    type: 'carousel',
-    autoplay: 8000 | true,
-    hoverPause: true,
-    animationDuration: 2000
+  type: 'carousel',
+  autoplay: 8000 | true,
+  hoverPause: true,
+  animationDuration: 2000
 }).mount();
 
 // GSAP animate WHAT IS DEMENTIA section
 const whatIsDementiaTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#trigger1",
-            start: "top top",
-            scrub: 1,
-            end: "+=20000",
-            // end: "+=" + (window.innerHeight * 2),
-            pin: true // this breaks svg transparency
-        } // looks like it is the opacity of the parallax that is effecting this
-    }) // can be seen on chrome dev tools on iphone4 setting
+  scrollTrigger: {
+    trigger: "#trigger1",
+    start: "top top",
+    scrub: 1,
+    end: "+=20000",
+    // end: "+=" + (window.innerHeight * 2),
+    pin: true // this breaks svg transparency
+  } // looks like it is the opacity of the parallax that is effecting this
+}) // can be seen on chrome dev tools on iphone4 setting
 whatIsDementiaTl.to('#fact1', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 whatIsDementiaTl.to('#fact2', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 whatIsDementiaTl.to('#fact3', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
@@ -80,22 +80,22 @@ gsap.registerPlugin(MotionPathPlugin);
 // });
 
 const whatIsDementiaT2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#trigger1",
-        start: 1000,
-        scrub: 1,
-        end: "+=2000",
-        yoyo: true,
-        ease: "power1.inOut",
-        motionPath: {
-            path: "#path",
-            align: "#placeholder1",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            // end: "+=" + (window.innerHeight * 2),
-            pin: true // this breaks svg transparency
-        }
-    } // looks like it is the opacity of the parallax that is effecting this
+  scrollTrigger: {
+    trigger: "#trigger1",
+    start: 1000,
+    scrub: 1,
+    end: "+=2000",
+    yoyo: true,
+    ease: "power1.inOut",
+    motionPath: {
+      path: "#path",
+      align: "#placeholder1",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+      // end: "+=" + (window.innerHeight * 2),
+      pin: true // this breaks svg transparency
+    }
+  } // looks like it is the opacity of the parallax that is effecting this
 })
 
 // Common dementia type 1 dialog
@@ -130,23 +130,17 @@ closeButton1.addEventListener('click', () => dementiaDialog1.hide());
 // openButton4.addEventListener('click', () => dementiaDialog4.show());
 // closeButton4.addEventListener('click', () => dementiaDialog4.hide());
 
-// Gallery image 1 dialog
-const galleryImage1 = document.querySelector('#galleryImage1');
-const galleryOpenButton1 = galleryImage1.nextElementSibling;
-
-galleryOpenButton1.addEventListener('click', () => galleryImage1.show());
-
 // Dementia among us animation
 const dementiaPrevelanceT1 = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#trigger2",
-            start: "top top",
-            scrub: 1,
-            end: "+=15000",
-            // end: "+=" + (window.innerHeight * 2),
-            pin: true // this breaks svg transparency
-        } // looks like it is the opacity of the parallax that is effecting this
-    }) // can be seen on chrome dev tools on iphone4 setting
+  scrollTrigger: {
+    trigger: "#trigger2",
+    start: "top top",
+    scrub: 1,
+    end: "+=15000",
+    // end: "+=" + (window.innerHeight * 2),
+    pin: true // this breaks svg transparency
+  } // looks like it is the opacity of the parallax that is effecting this
+}) // can be seen on chrome dev tools on iphone4 setting
 
 dementiaPrevelanceT1.to('#prevelance1', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 dementiaPrevelanceT1.to('#prevelance2', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
@@ -172,83 +166,29 @@ dementiaPrevelanceT1.to('#symptom10', 300, { autoAlpha: 1, opacity: 1, display: 
 // dementiaPrevelanceT1.to(".dementiaFact", 100, { opacity: 0, autoAlpha: 0 });
 // dementiaPrevelanceT1.to("#factsSlide2", 100, { opacity: 0, display: "none" });
 
+
+// Gallery image dialogs
+const galleryImages = document.querySelectorAll('.dialog-overview');
+galleryImages.forEach((image, i) => {
+  const button = image.nextElementSibling;
+  button.addEventListener('click', () => {
+    image.show();
+  });
+});
+
 // Gallery animations
-const tl1 = new TimelineMax({ onComplete: reverseFunction });
+let duration = 1;
+const tl1 = new TimelineMax({});
 
-const galleryCard1 = document.querySelector('#photoCard1');
-galleryCard1.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard1", { scale: "1.2" });
+const galleryCard = gsap.utils.toArray(".card-basic");
+
+galleryCard.forEach((card, i) => {
+  card.addEventListener("mouseenter", (e) => {
+    gsap.to(e.target, duration / 4, { y: -10, scale: 1.2 });
+    gsap.to(e.target, { boxShadow: "0 0 20px rgba(0,0,0,0.06)" });
+  });
+
+  card.addEventListener("mouseleave", (e) => {
+    gsap.to(e.target, duration / 2, { ease: Bounce.easeOut, y: 0, scale: 1 });
+  });
 });
-
-galleryCard1.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard1", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard2 = document.querySelector('#photoCard2');
-galleryCard2.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard2", { scale: "1.2" });
-});
-
-galleryCard2.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard2", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard3 = document.querySelector('#photoCard3');
-galleryCard3.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard3", { scale: "1.2" });
-});
-
-galleryCard3.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard3", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard4 = document.querySelector('#photoCard4');
-galleryCard4.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard4", { scale: "1.2" });
-});
-
-galleryCard4.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard4", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard5 = document.querySelector('#photoCard5');
-galleryCard5.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard5", { scale: "1.2" });
-});
-
-galleryCard5.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard5", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard6 = document.querySelector('#photoCard6');
-galleryCard6.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard6", { scale: "1.2" });
-});
-
-galleryCard6.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard6", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard7 = document.querySelector('#photoCard7');
-galleryCard7.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard7", { scale: "1.2" });
-});
-
-galleryCard7.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard7", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-const galleryCard8 = document.querySelector('#photoCard8');
-galleryCard8.addEventListener('mouseenter', () => {
-    tl1.to("#photoCard8", { scale: "1.2" });
-});
-
-galleryCard8.addEventListener('mouseleave', () => {
-    tl1.to("#photoCard8", { scale: "1", ease: Bounce.easeOut, x: 0, y: 0 });
-});
-
-function reverseFunction() {
-    //code here
-    // !tl.reverse();
-}
-//https://codepen.io/funkybudda/pen/MYPVrr
