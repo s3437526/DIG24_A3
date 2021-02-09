@@ -352,7 +352,7 @@
         </div>
         <div class="parallax"></div>
         <!-- DEMENTIA AMONG US SECTION -->
-        <div class="contentSection">
+        <div class="contentSection" id="trigger2">
             <div
                 style="position: absolute; top:0; width: 100%; height: 10vh; display: flex; justify-content: flex-end; align-items: center;">
                 <div class="contentSectionHeading">DEMENTIA AMONG US</div>
@@ -360,43 +360,45 @@
                     <img class="flower" src="./images/FMN_flower.svg" alt="Forget me not flower" />
                 </sl-button>
             </div>
-            <div class="contentContainer" style="margin-top: 15vh;">
-                <div class="prevelanceContainer" style="display: none;">
-                    <div class="flowerBulletPointContainer"><img class="flower bulletFlower"
-                            src="./images/FMN_flower.svg" alt="Forget me not flower" /></div>
-                    <div class="prevelanceText">Currently there are 447,115 Australians are currently living with
-                        dementia
+            <div class="contentContainer">
+                <div class="prevelanceContainers" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+                    <div class="prevelanceContainer" id="prevelance1" style=" margin: 5vh 0 5vh 0;">
+                        <div class="flowerBulletPointContainer"><img class="flower bulletFlower"
+                                src="./images/FMN_flower.svg" alt="Forget me not flower" /></div>
+                        <div class="prevelanceText">Currently there are 447,115 Australians are currently living with
+                            dementia
+                        </div>
+                    </div>
+                    <div class="prevelanceContainer" id="prevelance2" style=" margin: 5vh 0 5vh 0;">
+                        <div class="flowerBulletPointContainer"><img class="flower bulletFlower"
+                                src="./images/FMN_flower.svg" alt="Forget me not flower" /></div>
+                        <div class="prevelanceText">More than 50% of Australian Aged Care Residents have dementia</div>
+                    </div>
+                    <div class="prevelanceContainer" id="prevelance3" style=" margin: 5vh 0 5vh 0;">
+                        <div class="flowerBulletPointContainer"><img class="flower bulletFlower"
+                                src="./images/FMN_flower.svg" alt="Forget me not flower" /></div>
+                        <div class="prevelanceText">Without a medical breakthrough, it is estimated that over 1.1
+                            million
+                            Australians will be living with dementia by 2058</div>
                     </div>
                 </div>
-                <div class="prevelanceContainer" style="display: none;">
-                    <div class="flowerBulletPointContainer"><img class="flower bulletFlower"
-                            src="./images/FMN_flower.svg" alt="Forget me not flower" /></div>
-                    <div class="prevelanceText">More than 50% of Australian Aged Care Residents have dementia</div>
-                </div>
-                <div class="prevelanceContainer" style="display: none;">
-                    <div class="flowerBulletPointContainer"><img class="flower bulletFlower"
-                            src="./images/FMN_flower.svg" alt="Forget me not flower" /></div>
-                    <div class="prevelanceText">Without a medical breakthrough, it is estimated that over 1.1
-                        million
-                        Australians will be living with dementia by 2058</div>
-                </div>
-                <div style="position: relative;">
+                <div class="symptomsContainer"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
                     <div style="display: flex; justify-content: center;">
                         <div class="">
-                            <!-- <img class="" src="" alt="1" /> -->
                         </div>
-                        <div class="">Symptoms of dementia</div>
+                        <div id="symptomsHeading" style="margin: 2vh 0;">Symptoms of dementia</div>
                     </div>
-                    <div style="display: flex;">
-                        <div class="leftContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-right: 2%;">
+                    <div class="symptomRow" style="display: flex;">
+                        <div class="symptomContainer" id="symptom1" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-right: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>PROBLEMS WITH RECENT MEMORY</div>
                             </div>
                         </div>
-                        <div class="rightContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-left: 2%;">
+                        <div class="symptomContainer" id="symptom2" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-left: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>CONFUSED WITH PLACES AND TIME</div>
@@ -404,15 +406,15 @@
                         </div>
                     </div>
                     <div style="display: flex;">
-                        <div class="leftContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-right: 2%;">
+                        <div class="symptomContainer" id="symptom3" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-right: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>PROBLEMS WITH VISUAL PERCEPTION</div>
                             </div>
                         </div>
-                        <div class="rightContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-left: 2%;">
+                        <div class="symptomContainer" id="symptom4" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-left: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>DIFFICULTIES IN PLANNING AND THINKING</div>
@@ -420,15 +422,15 @@
                         </div>
                     </div>
                     <div style="display: flex;">
-                        <div class="leftContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-right: 2%;">
+                        <div class="symptomContainer" id="symptom5" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-right: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>CHANGES IN MOOD, BEHAVIOUR AND PERSONALITY</div>
                             </div>
                         </div>
-                        <div class="rightContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-left: 2%;">
+                        <div class="symptomContainer" id="symptom6" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-left: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>DIFFICULTIES IN COMMUNICATION</div>
@@ -436,15 +438,15 @@
                         </div>
                     </div>
                     <div style="display: flex;">
-                        <div class="leftContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-right: 2%;">
+                        <div class="symptomContainer" id="symptom7" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-right: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>PROBLEMS WITH WALKING AND MOBILITY</div>
                             </div>
                         </div>
-                        <div class="rightContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-left: 2%;">
+                        <div class="symptomContainer" id="symptom8" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-left: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>POOR JUDGEMENT AND IMPAIRED SOCIAL BEHAVIOUR</div>
@@ -452,15 +454,15 @@
                         </div>
                     </div>
                     <div style="display: flex;">
-                        <div class="leftContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-right: 2%;">
+                        <div class="symptomContainer" id="symptom9" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-right: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
-                                <div>MISPLACING THINGS</div>
+                                <div>REGULARLY MISPLACING THINGS</div>
                             </div>
                         </div>
-                        <div class="rightContainer" style="width: 50%;">
-                            <div style="margin: 5vw 0 5vw 0; display: flex; align-items: center; margin-left: 2%;">
+                        <div class="symptomContainer" id="symptom10" style="width: 50%;">
+                            <div style="margin: 2vh 0 2vh 0; display: flex; align-items: center; margin-left: 2%;">
                                 <img class="flower bulletFlower" src="./images/FMN_flower.svg"
                                     alt="Forget me not flower" />
                                 <div>DIFFICULTIES COMPLETING FAMILIAR TASKS</div>

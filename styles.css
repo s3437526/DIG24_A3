@@ -414,15 +414,25 @@ sl-card::part(body) {
 .prevelanceContainer {
   width: 100%;
   padding: 2% 0 2% 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.symptomContainer {
+  display: none;
+}
+
+.symptomRow .symptomContainer {
+  visibility: hidden;
+}
+
+.symptomsContainer {
+  display: none;
 }
 
 .flowerBulletPointContainer {
