@@ -328,7 +328,7 @@ sl-card body {
 }
 
 .card-overview {
-    position:relative;
+    position: relative;
     height: 100%;
     width: 100%;
 }
@@ -408,18 +408,30 @@ sl-card::part(body) {
 }
 
 // .dementiaTypeCard {
-    // background-color: yellow;
-    // width: 90%; // test
-    // margin: auto;
+// background-color: yellow;
+// width: 90%; // test
+// margin: auto;
 // }
 
 .prevelanceContainer {
     width: 100%;
     padding: 2% 0 2% 0;
-    display: flex;
+    display: none;
     justify-content: left;
     align-items: center;
     // background-color: red;
+}
+
+.symptomContainer {
+    display: none;
+}
+
+.symptomRow .symptomContainer{
+    visibility: hidden;
+}
+
+.symptomsContainer {
+    display: none;
 }
 
 .flowerBulletPointContainer {

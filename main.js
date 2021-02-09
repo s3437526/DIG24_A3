@@ -135,3 +135,39 @@ const galleryImage1 = document.querySelector('#galleryImage1');
 const galleryOpenButton1 = galleryImage1.nextElementSibling;
 
 galleryOpenButton1.addEventListener('click', () => galleryImage1.show());
+
+// Dementia among us animation
+const dementiaPrevelanceT1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#trigger2",
+    start: "top top",
+    scrub: 1,
+    end: "+=15000",
+    // end: "+=" + (window.innerHeight * 2),
+    pin: true // this breaks svg transparency
+  } // looks like it is the opacity of the parallax that is effecting this
+}) // can be seen on chrome dev tools on iphone4 setting
+
+dementiaPrevelanceT1.to('#prevelance1', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#prevelance2', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#prevelance3', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+
+dementiaPrevelanceT1.to(".prevelanceContainer", 50, { opacity: 0, autoAlpha: 0, display: "none" });
+// dementiaPrevelanceT1.to(".prevelanceContainer", 50, { opacity: 0, display: "none" });
+
+dementiaPrevelanceT1.to('.symptomsContainer', 10, { autoAlpha: 1, opacity: 1, display: "block" });
+
+dementiaPrevelanceT1.to('#symptomsHeading', 300, { autoAlpha: 1, opacity: 1, display: "block" });
+dementiaPrevelanceT1.to('#symptom1', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom2', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom3', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom4', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom5', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom6', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom7', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom8', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom9', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+dementiaPrevelanceT1.to('#symptom10', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
+
+// dementiaPrevelanceT1.to(".dementiaFact", 100, { opacity: 0, autoAlpha: 0 });
+// dementiaPrevelanceT1.to("#factsSlide2", 100, { opacity: 0, display: "none" });
