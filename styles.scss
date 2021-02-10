@@ -373,6 +373,10 @@ sl-card::part(body) {
     justify-content: center;
 }
 
+.dialog-overview::part(body){
+    max-height: 80%;
+    width: auto;
+}
 // .dementiaTypeCard {
 // background-color: yellow;
 // width: 90%; // test

@@ -415,6 +415,11 @@ sl-card::part(body) {
           justify-content: center;
 }
 
+.dialog-overview::part(body) {
+  max-height: 80%;
+  width: auto;
+}
+
 .prevelanceContainers {
   display: none;
 }
