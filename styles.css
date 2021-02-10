@@ -15,12 +15,6 @@ html,
 body {
   height: 100%;
   font-family: Montserrat;
-  /*overflow: hidden;*/
-  /*opacity: 0;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-    animation-delay: 6s;
-    animation-fill-mode: forwards;*/
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
@@ -159,7 +153,6 @@ body::-webkit-scrollbar {
 
 .custom_glide_Container {
   max-height: 70vh;
-  /* .......*/
   font-size: 0;
 }
 
@@ -275,17 +268,27 @@ body::-webkit-scrollbar {
 }
 
 .parallax {
-  /* The image used */
   background-image: url("./images/sad_man.jpg");
-  /* Set a specific height */
   height: 100vh;
   width: 100vw;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.5;
+}
+
+#symptom1,
+#symptom2,
+#symptom3,
+#symptom4,
+#symptom5,
+#symptom6,
+#symptom7,
+#symptom8,
+#symptom9,
+#symptom10 {
+  visibility: hidden;
 }
 
 sl-card {
@@ -412,10 +415,19 @@ sl-card::part(body) {
           justify-content: center;
 }
 
+.dialog-overview::part(body) {
+  max-height: 80%;
+  width: auto;
+}
+
+.prevelanceContainers {
+  display: none;
+}
+
 .prevelanceContainer {
+  visibility: hidden;
   width: 100%;
   padding: 2% 0 2% 0;
-  display: none;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -426,6 +438,7 @@ sl-card::part(body) {
 
 .symptomContainer {
   display: none;
+  height: 15vh;
 }
 
 .symptomRow .symptomContainer {

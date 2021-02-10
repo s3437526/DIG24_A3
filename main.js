@@ -142,6 +142,8 @@ const dementiaPrevelanceT1 = gsap.timeline({
   } // looks like it is the opacity of the parallax that is effecting this
 }) // can be seen on chrome dev tools on iphone4 setting
 
+dementiaPrevelanceT1.to('.prevelanceContainers', 10, { autoAlpha: 1, opacity: 1, display: "block" });
+
 dementiaPrevelanceT1.to('#prevelance1', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 dementiaPrevelanceT1.to('#prevelance2', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 dementiaPrevelanceT1.to('#prevelance3', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
@@ -206,3 +208,5 @@ galleryCard.forEach((card, i) => {
     gsap.to(e.target, duration / 2, { ease: Bounce.easeOut, y: 0, scale: 1 });
   });
 });
+
+//look at gsap snap to section headings
