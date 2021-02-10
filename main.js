@@ -166,6 +166,23 @@ dementiaPrevelanceT1.to('#symptom10', 300, { autoAlpha: 1, opacity: 1, display: 
 // dementiaPrevelanceT1.to(".dementiaFact", 100, { opacity: 0, autoAlpha: 0 });
 // dementiaPrevelanceT1.to("#factsSlide2", 100, { opacity: 0, display: "none" });
 
+// Animation duration (sec)
+const duration = 1;
+
+// const tl1 = new TimelineMax({});
+
+// 4 common dementia types animations
+const dementiaCard = gsap.utils.toArray(".card-overview");
+dementiaCard.forEach((card, i) => {
+  card.addEventListener("mouseenter", (e) => {
+    gsap.to(e.target, duration / 4, { y: -10, scale: 1.2 });
+    gsap.to(e.target, { boxShadow: "0 0 20px rgba(0,0,0,0.06)" });
+  });
+
+  card.addEventListener("mouseleave", (e) => {
+    gsap.to(e.target, duration / 2, { ease: Bounce.easeOut, y: 0, scale: 1 });
+  });
+});
 
 // Gallery image dialogs
 const galleryImages = document.querySelectorAll('.dialog-overview');
@@ -177,9 +194,6 @@ galleryImages.forEach((image, i) => {
 });
 
 // Gallery animations
-let duration = 1;
-const tl1 = new TimelineMax({});
-
 const galleryCard = gsap.utils.toArray(".card-basic");
 
 galleryCard.forEach((card, i) => {
