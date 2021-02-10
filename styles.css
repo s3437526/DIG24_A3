@@ -418,6 +418,7 @@ sl-card::part(body) {
 .dialog-overview::part(body) {
   max-height: 80%;
   width: auto;
+  --width: 50%;
 }
 
 .prevelanceContainers {

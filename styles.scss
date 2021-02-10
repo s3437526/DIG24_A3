@@ -24,11 +24,13 @@ body {
     /* Add the ability to scroll */
 }
 
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 
 body::-webkit-scrollbar {
     display: none;
 }
+
 
 /* Animations */
 
@@ -185,7 +187,6 @@ body::-webkit-scrollbar {
 //     right: 2vw;
 //     top: 3vw;
 // }
-
 .dementiaFact {
     visibility: hidden;
     opacity: 0;
@@ -207,7 +208,6 @@ body::-webkit-scrollbar {
 // #fact12 {
 //     opacity: 0;
 // }
-
 #factsSlide1 #factsSlide2 {
     display: none;
 }
@@ -373,16 +373,17 @@ sl-card::part(body) {
     justify-content: center;
 }
 
-.dialog-overview::part(body){
+.dialog-overview::part(body) {
     max-height: 80%;
     width: auto;
+    --width: 50%;
 }
+
 // .dementiaTypeCard {
 // background-color: yellow;
 // width: 90%; // test
 // margin: auto;
 // }
-
 .prevelanceContainers {
     display: none;
 }
@@ -452,6 +453,7 @@ sl-card::part(body) {
     max-height: 100%;
     width: 100vw;
 }
+
 
 /* For mobile phones: */
 
