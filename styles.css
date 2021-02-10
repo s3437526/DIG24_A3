@@ -159,7 +159,7 @@ body::-webkit-scrollbar {
 .contentSection {
   position: relative;
   width: 100vw;
-  min-height: 90vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

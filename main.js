@@ -10,11 +10,11 @@ function topFunction() {
 // console.log("triggered scroll");
 // })
 
-// Aggression cart events
-const dementiaTypeCard = document.querySelector('.dementiaTypeCard');
-dementiaTypeCard.addEventListener('click', () => {
-  console.log("dementiaTypeCard card clicked");
-});
+// // Aggression cart events
+// const dementiaTypeCard = document.querySelector('.dementiaTypeCard');
+// dementiaTypeCard.addEventListener('click', () => {
+//   console.log("dementiaTypeCard card clicked");
+// });
 
 new Glide('.glide', {
   type: 'carousel',
@@ -210,3 +210,15 @@ galleryCard.forEach((card, i) => {
 });
 
 //look at gsap snap to section headings
+
+// Pin each previously unpinned section to top of screen
+const dementiaPrevelanceT3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".pinSection",
+    start: "top top",
+    markers: true,
+    end: "+=200",
+    // end: "+=" + (window.innerHeight * 2),
+    pin: true // this breaks svg transparency
+  } // looks like it is the opacity of the parallax that is effecting this
+}) 
