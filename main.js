@@ -1,20 +1,7 @@
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  console.log("triggered scroll");
 }
-
-// document.querySelector('.rttFlower').addEventListener('click', () => {
-//   document.body.scrollTop = 0; // For Safari
-//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// console.log("triggered scroll");
-// })
-
-// Aggression cart events
-const dementiaTypeCard = document.querySelector('.dementiaTypeCard');
-dementiaTypeCard.addEventListener('click', () => {
-  console.log("dementiaTypeCard card clicked");
-});
 
 new Glide('.glide', {
   type: 'carousel',
@@ -23,12 +10,16 @@ new Glide('.glide', {
   animationDuration: 2000
 }).mount();
 
+gsap.registerPlugin(ScrollTrigger);
+
 // GSAP animate WHAT IS DEMENTIA section
 const whatIsDementiaTl = gsap.timeline({
   scrollTrigger: {
     trigger: "#trigger1",
     start: "top top",
     scrub: 1,
+    markers: true,
+    anticipatePin: 1,
     end: "+=20000",
     // end: "+=" + (window.innerHeight * 2),
     pin: true // this breaks svg transparency
@@ -65,20 +56,6 @@ whatIsDementiaTl.to('#commonType4', 500, { autoAlpha: 1, opacity: 1, display: "f
 
 gsap.registerPlugin(MotionPathPlugin);
 
-// gsap.from("#commonType4", {
-//   duration: 5, 
-//   repeat: 12,
-//   repeatDelay: 3,
-//   yoyo: true,
-//   ease: "power1.inOut",
-//   motionPath:{
-//     path: "#path",
-//     align: "self",
-//     autoRotate: true,
-//     alignOrigin: [0.5, 0.5]
-//   }
-// });
-
 const whatIsDementiaT2 = gsap.timeline({
   scrollTrigger: {
     trigger: "#trigger1",
@@ -86,6 +63,7 @@ const whatIsDementiaT2 = gsap.timeline({
     scrub: 1,
     end: "+=2000",
     yoyo: true,
+    anticipatePin: 1,
     ease: "power1.inOut",
     motionPath: {
       path: "#path",
@@ -106,36 +84,14 @@ const closeButton1 = dementiaDialog1.querySelector('sl-button[slot="footer"]');
 openButton1.addEventListener('click', () => dementiaDialog1.show());
 closeButton1.addEventListener('click', () => dementiaDialog1.hide());
 
-// // Common dementia type 2 dialog
-// const dementiaDialog2 = document.querySelector('#dementiaDialog2');
-// const openButton2 = dementiaDialog2.nextElementSibling;
-// const closeButton2 = dementiaDialog2.querySelector('sl-button[slot="footer"]');
-
-// openButton2.addEventListener('click', () => dementiaDialog2.show());
-// closeButton2.addEventListener('click', () => dementiaDialog2.hide());
-
-// // Common dementia type 3 dialog
-// const dementiaDialog3 = document.querySelector('#dementiaDialog3');
-// const openButton3 = dementiaDialog3.nextElementSibling;
-// const closeButton3 = dementiaDialog3.querySelector('sl-button[slot="footer"]');
-
-// openButton3.addEventListener('click', () => dementiaDialog3.show());
-// closeButton3.addEventListener('click', () => dementiaDialog3.hide());
-
-// // Common dementia type 4 dialog
-// const dementiaDialog4 = document.querySelector('#dementiaDialog4');
-// const openButton4 = dementiaDialog4.nextElementSibling;
-// const closeButton4 = dementiaDialog4.querySelector('sl-button[slot="footer"]');
-
-// openButton4.addEventListener('click', () => dementiaDialog4.show());
-// closeButton4.addEventListener('click', () => dementiaDialog4.hide());
-
 // Dementia among us animation
 const dementiaPrevelanceT1 = gsap.timeline({
   scrollTrigger: {
-    trigger: "#trigger2",
+    trigger: "#trigger3",
     start: "top top",
     scrub: 1,
+    markers: true,
+    anticipatePin: 1,
     end: "+=15000",
     // end: "+=" + (window.innerHeight * 2),
     pin: true // this breaks svg transparency
@@ -149,7 +105,6 @@ dementiaPrevelanceT1.to('#prevelance2', 300, { autoAlpha: 1, opacity: 1, display
 dementiaPrevelanceT1.to('#prevelance3', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 
 dementiaPrevelanceT1.to(".prevelanceContainer", 50, { opacity: 0, autoAlpha: 0, display: "none" });
-// dementiaPrevelanceT1.to(".prevelanceContainer", 50, { opacity: 0, display: "none" });
 
 dementiaPrevelanceT1.to('.symptomsContainer', 10, { autoAlpha: 1, opacity: 1, display: "block" });
 
@@ -164,9 +119,6 @@ dementiaPrevelanceT1.to('#symptom7', 300, { autoAlpha: 1, opacity: 1, display: "
 dementiaPrevelanceT1.to('#symptom8', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 dementiaPrevelanceT1.to('#symptom9', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
 dementiaPrevelanceT1.to('#symptom10', 300, { autoAlpha: 1, opacity: 1, display: "flex" });
-
-// dementiaPrevelanceT1.to(".dementiaFact", 100, { opacity: 0, autoAlpha: 0 });
-// dementiaPrevelanceT1.to("#factsSlide2", 100, { opacity: 0, display: "none" });
 
 // Animation duration (sec)
 const duration = 1;
@@ -209,4 +161,27 @@ galleryCard.forEach((card, i) => {
   });
 });
 
-//look at gsap snap to section headings
+// Pin each previously unpinned section to top of screen
+// const scrollPin = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".pinSection",
+//     start: "top top",
+//     markers: true,
+//     end: "+=500",
+//     pin: true
+//   }
+// }) 
+
+gsap.utils.toArray('.pinSection').forEach(section => {
+  ScrollTrigger.create({
+    trigger: section,
+    markers: true,
+    refreshPriority: 0,
+    pin: true,
+    end: "+=500",
+  });
+});
+// With this enabled the DEMANTIA AMONG US section snapt to top of 
+//screen from bottom third
+
+// Skipping back up after completing animation of DEMENTUA AMONG US section
