@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
     bottom: 25vh;
 }
 
-.flower {
+.thumbnailImage {
     width: 100%;
     height: 100%;
 }
@@ -130,12 +130,23 @@ body::-webkit-scrollbar {
     font-size: 0;
 }
 
+.contentHeader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .contentSection {
     position: relative;
     width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgba(29, 128, 171, 1);
 }
 
@@ -353,6 +364,7 @@ sl-card::part(body) {
 .cardImage {
     width: 100%;
     height: 100%;
+    border-radius: 8px 8px 0 0;
 }
 
 .contentImageContainer {
