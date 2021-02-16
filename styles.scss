@@ -24,11 +24,13 @@ body {
     /* Add the ability to scroll */
 }
 
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 
 body::-webkit-scrollbar {
     display: none;
 }
+
 
 /* Animations */
 
@@ -128,6 +130,15 @@ body::-webkit-scrollbar {
     font-size: 0;
 }
 
+.downArrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 8%;
+    width: auto;
+}
+
 .contentHeader {
     position: absolute;
     top: 0;
@@ -159,7 +170,7 @@ body::-webkit-scrollbar {
     position: absolute;
     width: 100vw;
     transform: translateY(100%);
-    bottom: 0vh;    
+    bottom: 0vh;
     z-index: 1;
 }
 
@@ -312,11 +323,9 @@ body::-webkit-scrollbar {
 // sl-card {
 //     max-height: 100%;
 // }
-
 // sl-card body {
 //     background-color: purple;
 // }
-
 .card {
     position: relative;
     margin: 10% 2% 2% 2%;
@@ -503,6 +512,7 @@ sl-card::part(body) {
     max-height: 100%;
     width: 100vw;
 }
+
 
 /* For mobile phones: */
 
