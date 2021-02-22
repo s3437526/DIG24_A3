@@ -15,11 +15,8 @@ html,
 body {
     height: 100%;
     font-family: Montserrat;
-    // -ms-overflow-style: none;
     /* IE and Edge */
-    scrollbar-width: none;
     /* Firefox */
-    // overflow-y: scroll;
     color: white;
     /* Add the ability to scroll */
 }
@@ -191,13 +188,6 @@ body::-webkit-scrollbar {
 }
 
 .rttFlower::part(base) {
-    // width: 10vh;
-    // margin-right: 10vw;
-    // margin-top: 10vw;
-    // display: flex;
-    //     align-items: center;
-    // justify-content: center;
-    // position: relative;
     border: none;
     background-color: rgba(29, 128, 171, 1);
     cursor: pointer;
@@ -213,16 +203,12 @@ body::-webkit-scrollbar {
     color: white;
 }
 
-// .rttFlower {
-//     display: flex;
-//     max-width: 10vw;
-//     max-height: 10vw;
-//     align-items: center;
-//     justify-content: center;
-//     position: relative;
-//     right: 2vw;
-//     top: 3vw;
-// }
+.dementiaFacts{
+    position:relative;
+    text-align: center;
+    margin-left: 1%;
+}
+
 .dementiaFact {
     visibility: hidden;
     opacity: 0;
@@ -230,20 +216,6 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
-// #fact1,
-// #fact2,
-// #fact3,
-// #fact4,
-// #fact5,
-// #fact6,
-// #fact7,
-// #fact8,
-// #fact9,
-// #fact10,
-// #fact11,
-// #fact12 {
-//     opacity: 0;
-// }
 #factsSlide1 #factsSlide2 {
     display: none;
 }
@@ -272,28 +244,27 @@ body::-webkit-scrollbar {
 .actionFacts {
     display: "none";
     position: absolute;
-    background-color: red;
 }
 
 #commonType1 {
     top: 35%;
-    left: 25%;
+    left: 15%;
     transform: translateX(-35%, -25%);
 }
 
 #commonType2 {
     top: 55%;
-    left: 25%;
+    left: 15%;
 }
 
 #commonType3 {
     top: 35%;
-    right: 30%;
+    right: 20%;
 }
 
 #commonType4 {
     top: 55%;
-    right: 30%;
+    right: 20%;
 }
 
 .parallax {
@@ -320,12 +291,6 @@ body::-webkit-scrollbar {
     visibility: hidden;
 }
 
-// sl-card {
-//     max-height: 100%;
-// }
-// sl-card body {
-//     background-color: purple;
-// }
 .card {
     position: relative;
     margin: 10% 2% 2% 2%;
@@ -438,11 +403,6 @@ sl-card::part(body) {
     --width: 50%;
 }
 
-// .dementiaTypeCard {
-// background-color: yellow;
-// width: 90%; // test
-// margin: auto;
-// }
 .prevelanceContainers {
     display: none;
 }
