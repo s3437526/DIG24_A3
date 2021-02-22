@@ -16,7 +16,6 @@ body {
   height: 100%;
   font-family: Montserrat;
   /* IE and Edge */
-  scrollbar-width: none;
   /* Firefox */
   color: white;
   /* Add the ability to scroll */
@@ -247,6 +246,12 @@ body::-webkit-scrollbar {
   color: white;
 }
 
+.dementiaFacts {
+  position: relative;
+  text-align: center;
+  margin-left: 1%;
+}
+
 .dementiaFact {
   visibility: hidden;
   opacity: 0;
@@ -283,29 +288,28 @@ body::-webkit-scrollbar {
 .actionFacts {
   display: "none";
   position: absolute;
-  background-color: red;
 }
 
 #commonType1 {
   top: 35%;
-  left: 25%;
+  left: 15%;
   -webkit-transform: translateX(-35%, -25%);
           transform: translateX(-35%, -25%);
 }
 
 #commonType2 {
   top: 55%;
-  left: 25%;
+  left: 15%;
 }
 
 #commonType3 {
   top: 35%;
-  right: 30%;
+  right: 20%;
 }
 
 #commonType4 {
   top: 55%;
-  right: 30%;
+  right: 20%;
 }
 
 .parallax {
