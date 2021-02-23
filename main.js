@@ -6,10 +6,10 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// Carousel CSS animation
+// Carousel Javascript animation
 new Glide('.glide', {
     type: 'carousel',
-    autoplay: 8000 | true,
+    autoplay: 4000 | true,
     hoverPause: true,
     animationDuration: 2000
 }).mount();
